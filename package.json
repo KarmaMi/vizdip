@@ -1,0 +1,16 @@
+{
+  "name": "vizdip",
+  "version": "0.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git@github-karmami:KarmaMi/vizdip.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^14.0.0",
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.8",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
