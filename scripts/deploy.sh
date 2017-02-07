@@ -29,8 +29,9 @@ then
   rm -rf ./images &&
   mv images-output images &&
   ## Push to GitHub Pages
-  git add js/vizdip.js
-  git add api
+  git add js/vizdip.js &&
+  git add api &&
+  git add images &&
   git commit --allow-empty -m "Release ${TRAVIS_TAG}" &&
   echo "push to gh-pages" &&
   git push -q origin gh-pages
