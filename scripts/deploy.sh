@@ -12,7 +12,7 @@ then
   $(npm bin)/set-up-ssh --key "$encrypted_8167579b67a3_key" \
                         --iv "$encrypted_8167579b67a3_iv" \
                         --path-encrypted-key ".travis/github_deploy_key.enc" &&
-  cp images images-output &&
+  cp images images-output -r &&
   ## Create a javascript file for web browsers
   gulp browserify &&
   ## Create JSDoc
@@ -23,7 +23,7 @@ then
   git checkout gh-pages &&
   ## Add files to gh-pages
   mkdir -p js/ &&
-  cp ./lib/vizdip.js ./js &&
+  cp ./vizdip.js ./js &&
   rm -rf ./api &&
   mv api-output ./api &&
   rm -rf ./images &&
