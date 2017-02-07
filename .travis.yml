@@ -1,0 +1,11 @@
+branches:
+  except:
+    - gh-pages
+language: node_js
+node_js:
+  - "node"
+before_script:
+  - npm install -g gulp
+script: echo 'There is no test'
+after_success:
+  - ./scripts/deploy.sh
