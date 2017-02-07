@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg4145"
+   version="1.1"
+   width="30.001245"
+   height="21.427326"
+   sodipodi:docname="fleet-v2.0.svg"
+   inkscape:version="0.92.0 r">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1918"
+     inkscape:window-height="1058"
+     id="namedview17"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="8.5578051"
+     inkscape:cx="-33.098494"
+     inkscape:cy="28.426985"
+     inkscape:window-x="0"
+     inkscape:window-y="20"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg4145" />
+  <metadata
+     id="metadata4151">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs4149" />
+  <g>
+    <rect
+       ry="0.82358736"
+       y="0.51219875"
+       x="0.51344293"
+       height="20.402929"
+       width="28.97436"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <g
+       transform="matrix(0.83088234,0,0,0.82886903,2.5482914,2.6321901)"
+       style="stroke-width:1.20500064">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 22.2,17.1 v -1.5 h 1 l 1,0.3 h 1.5 v 0.25 h -1.5 l -0.2,0.35 0.2,0.3 v 0.3 z"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.60250032;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         class="fix-color" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 8.5,17.1 v -1.5 h -1 l -1,0.3 H 5 v 0.25 h 1.5 l 0.2,0.35 -0.2,0.3 v 0.3 z"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.60250032;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         class="fix-color" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 11.6,16.5 v -3 L 11.1,13 h 0.5 V 7.3 L 11.1,7 h 0.5 V 0 h 0.2 v 7 h 0.5 L 11.8,7.3 V 13 h 0.5 l -0.5,0.5 v 3 z"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.60250032;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         class="fix-color" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 20.1,16.5 v -3 L 19.6,13 h 0.5 V 7.3 L 19.6,7 h 0.5 V 0 h 0.2 v 7 h 0.5 L 20.3,7.3 V 13 h 0.5 l -0.5,0.5 v 3 z"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.60250032;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         class="fix-color" />
+      <path
+         inkscape:connector-curvature="0"
+         d="M 13,16.5 V 11 l 0.2,-0.5 h 1.1 l 0.2,0.5 v 5.5"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.60250032;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         class="fix-color" />
+      <path
+         inkscape:connector-curvature="0"
+         d="M 17,16.5 V 11 l 0.2,-0.5 h 1.1 l 0.2,0.5 v 5.5"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.60250032;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         class="fix-color" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 9.3,17.1 v -2 h 0.2 v -2 h 1.3 v 1 l -0.3,0.5 v 0.5 h 1 v 1 h 8.8 v -1 h 0.5 v -1 h 0.5 v 1 h 0.5 v 2"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.60250032;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         class="fix-color" />
+      <path
+         inkscape:connector-curvature="0"
+         d="M 0,19.5 0.25,17 H 29.5 l 0.5,1.5 v 1 z"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.60250032;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         class="fix-color" />
+    </g>
+  </g>
+</svg>
