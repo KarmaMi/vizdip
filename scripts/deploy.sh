@@ -27,5 +27,5 @@ then
   git add api
   git commit --allow-empty -m "Release ${TRAVIS_TAG}" &&
   echo "push to gh-pages" &&
-  git push -q origin gh-pages &&
+  git push -q origin gh-pages
 fi
