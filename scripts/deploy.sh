@@ -5,10 +5,14 @@ then
   # Install modules
   npm i -g jsdoc &&
   # Publish to GitHub Pages
+  ## Set Git configs
+  git config user.name "${GH_USER_NAME}" &&
+  git config user.email "${GH_USER_EMAIL}" &&
   ## Prepare ssh keys
   $(npm bin)/set-up-ssh --key "$encrypted_8167579b67a3_key" \
                         --iv "$encrypted_8167579b67a3_iv" \
-                        --path-encrypted-key ".travis/github_deploy_key.enc"
+                        --path-encrypted-key ".travis/github_deploy_key.enc" &&
+  cp images images-output &&
   ## Create a javascript file for web browsers
   gulp browserify &&
   ## Create JSDoc
@@ -22,6 +26,8 @@ then
   cp ./lib/vizdip.js ./js &&
   rm -rf ./api &&
   mv api-output ./api &&
+  rm -rf ./images &&
+  mv images-output images &&
   ## Push to GitHub Pages
   git add js/vizdip.js
   git add api
