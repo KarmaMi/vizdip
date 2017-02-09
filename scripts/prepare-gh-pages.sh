@@ -1,6 +1,8 @@
 #! /bin/sh
 
 mkdir -p public &&
+rm -rf ./public/docs &&
+mkdir -p public/js &&
 ## Create a javascript file for web browsers
 gulp browserify &&
 ## Create JSDoc
@@ -10,9 +12,7 @@ git fetch &&
 git branch gh-pages origin/gh-pages &&
 git checkout gh-pages &&
 ## Add files to gh-pages
-rm -rf ./public/docs &&
 cp sample ./public/sample -r &&
 cp index.html ./public/ &&
-mkdir -p public/js &&
 cp ./vizdip.js ./public/js &&
-cp ./out ./public/docs -rx
+cp ./out ./public/docs -r
