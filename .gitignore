@@ -1,2 +1,5 @@
 node_modules/
 vizdip.js
+*.js.map
+target/
+*.d.ts
