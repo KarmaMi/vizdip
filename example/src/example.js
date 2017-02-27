@@ -467,7 +467,9 @@ function initialize () {
     }
   }
   const stringify = {
-    fromState: (state) => `${state.turn.year}-${Season[state.turn.season]} (${Phase[state.phase]})`
+    fromState: (state) => `${state.turn.year}-${Season[state.turn.season]} (${Phase[state.phase]})`,
+    fromProvince: (province) => null,
+    fromLocation: (location) => null
   }
   const configs = {}
   viz = new vizdip.StandardRuleVisualizer(svgs, board.map, colors, stringify, configs)

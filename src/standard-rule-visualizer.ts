@@ -1,6 +1,8 @@
 import { Visualizer } from "./visualizer"
 import * as diplomacy from "js-diplomacy"
 
+export declare type Province<Power> = diplomacy.board.Province<Power>
+export declare type Location<Power> = diplomacy.standardRule.Location<Power>
 export declare type MilitaryBranch = diplomacy.standardRule.MilitaryBranch
 export declare type State = diplomacy.standardRule.State
 export declare type Dislodged<Power> = diplomacy.standardRule.Dislodged<Power>
@@ -72,8 +74,10 @@ export interface Colors<Power> {
   dislodged: string | null
 }
 
-export interface Stringify {
+export interface Stringify<Power> {
   fromState: (state: State) => string
+  fromProvince: (province: Province<Power>) => string | null
+  fromLocation: (location: Location<Power>) => string | null
 }
 
 export interface Configs {
@@ -90,20 +94,36 @@ export class StandardRuleVisualizer<Power>
 
   constructor (
     private svgs: Svgs, map: diplomacy.standardRule.DiplomacyMap<Power>,
-    private colors: Colors<Power>, private stringify: Stringify, private configs: Configs
+    private colors: Colors<Power>, private stringify: Stringify<Power>, private configs: Configs
   ) {
     super(svgs.map)
     // Initialize provinces
     map.provinces.forEach(province => {
+      // Toggle supply center
       const supplyCenterSvg =
         this.mapSvg.getElementById(`${province.name.toString()}/supply_center`)
 
-      if (!supplyCenterSvg) return
+      if (supplyCenterSvg) {
+        if (province.isSupplyCenter) {
+          supplyCenterSvg.style.display = "inline"
+        } else {
+          supplyCenterSvg.style.display = "none"
+        }
+      }
 
-      if (province.isSupplyCenter) {
-        supplyCenterSvg.style.display = "inline"
-      } else {
-        supplyCenterSvg.style.display = "none"
+      const nameSvg = this.mapSvg.getElementById(`${province.name}/name`)
+      const name = this.stringify.fromProvince(province)
+      if (nameSvg && name) {
+        nameSvg.innerHTML = name
+      }
+    })
+
+    // Initialize locations
+    map.locations.forEach(location => {
+      const nameSvg = this.mapSvg.getElementById(`${location.province.name}/${location}/name`)
+      const name = this.stringify.fromLocation(location)
+      if (nameSvg && name) {
+        nameSvg.innerHTML = name
       }
     })
   }
