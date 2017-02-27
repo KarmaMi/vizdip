@@ -1,4 +1,5 @@
 const gulp = require('gulp')
+const gutil = require('gulp-util')
 const source = require('vinyl-source-stream')
 const buffer = require('vinyl-buffer')
 const merge = require('merge2')
@@ -26,6 +27,18 @@ gulp.task('compile-src', () => {
       .pipe(gulp.dest('./target/src'))
   ])
 })
+
+gulp.task('compile-sample', () => {
+  browserify({entries: ['example/src/example.js']})
+  .plugin(tsify, tsCompilerOptions)
+  .bundle()
+  .pipe(source('example.js'))
+  .pipe(buffer())
+  .pipe(sourcemaps.init())
+  .pipe(sourcemaps.write('./'))
+  .pipe(gulp.dest('example/'))
+})
+gulp.task('watch-sample', () => gulp.watch(['src/**/*.ts', 'example/**/*.js'], ['compile-sample']))
 
 // Create a documentation
 gulp.task('docs', () => {
