@@ -25,6 +25,7 @@ cat << EOF > ./public/index.html &&
 </body>
 </html>
 EOF
+touch ./public/.nojekyll &&
 cp ./browser/vizdip.js ./public/js &&
 cp ./browser/vizdip.js.map ./public/js &&
-cp ./docs ./public/docs -r
+mv ./docs ./public/docs -r
