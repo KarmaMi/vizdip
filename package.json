@@ -1,6 +1,8 @@
 {
   "name": "vizdip",
   "version": "0.1.0",
+  "main": "target/src/vizdip.js",
+  "types": "target/intrface/vizdip.d.ts",
   "description": "",
   "repository": {
     "type": "git",
