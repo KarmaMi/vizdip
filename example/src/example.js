@@ -6,8 +6,8 @@ const Result = diplomacy.standardRule.Result
 const OrderType = diplomacy.standardRule.Order.OrderType
 const Phase = diplomacy.standardRule.Phase
 const Power = diplomacy.standardMap.Power
-const Helper = diplomacy.standardRule.StandardRuleHelper
-const Utils = diplomacy.standardRule.StandardRuleUtils
+const Helper = diplomacy.standardRule.Helper
+const Utils = diplomacy.standardRule.Utils
 
 const variant = diplomacy.standard.variant
 
