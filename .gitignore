@@ -1,7 +1,26 @@
-node_modules/
-docs/
-*.js.map
-*.d.ts
-vizdip.js
-target/
-example/example.js
+#all ignore
+/*
+!/browser/
+/browser/vizdip.js
+/browser/vizdip.js.map
+!/example/
+/example/example.js
+/example/example.js.map
+
+# accept
+!/LICENSE
+!/package.json
+!/README.md
+!/gulpfile.js
+!/.gitignore
+!/.npmignore
+!/.travis.yml
+!/bower.json
+!/.travis
+!/scripts/
+!/tslint.json
+!/browser/index.ts
+!/src/
+!/images/
+!/example/index.html
+!/example/src/example.js
