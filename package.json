@@ -23,6 +23,6 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
-    "js-diplomacy": "0.0.1"
+    "js-diplomacy": "0.1.0"
   }
 }
