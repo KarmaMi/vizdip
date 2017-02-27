@@ -11,8 +11,15 @@
     "@alrra/travis-scripts": "^3.0.1",
     "browserify": "^14.0.0",
     "gulp": "^3.9.1",
-    "gulp-jsdoc3": "^1.0.1",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-typedoc": "^2.0.2",
     "gulp-util": "^3.0.8",
+    "gulp-typescript": "^3.1.4 ",
+    "merge2": "^1.0.3",
+    "tsify": "^3.0.1",
+    "typedoc": "^0.5.5",
+    "typescript": "^2.1.6",
+    "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
