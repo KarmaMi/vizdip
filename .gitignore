@@ -1,4 +1,5 @@
 node_modules/
+docs/
 *.js.map
 *.d.ts
 vizdip.js
