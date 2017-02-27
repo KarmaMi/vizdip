@@ -1,5 +1,4 @@
 const gulp = require('gulp')
-const gutil = require('gulp-util')
 const source = require('vinyl-source-stream')
 const buffer = require('vinyl-buffer')
 const merge = require('merge2')
