@@ -179,7 +179,7 @@ function updateDestLists (orderElem) {
       break
     case 'C':
       getOrders().forEach(order => {
-        if (order.tpe === 'Move') {
+        if (order.tpe === OrderType.Move) {
           const el = document.createElement('option')
           el.innerHTML = stringify(order)
           el.value = JSON.stringify([order.unit.location.toString(), order.destination.toString()])
@@ -353,7 +353,7 @@ function createOrderPanel () {
     panel.classList.add('panel-default')
     const header = document.createElement('div')
     header.classList.add('panel-heading')
-    header.innerHTML = power
+    header.innerHTML = Power[power]
     const body = document.createElement('div')
     body.classList.add('pael-body')
     body.innerHTML = `<ul class="list-group" id="order-${power}"></ul>`
