@@ -1,5 +1,4 @@
 const gulp = require('gulp')
-const gutil = require('gulp-util')
 const source = require('vinyl-source-stream')
 const buffer = require('vinyl-buffer')
 const merge = require('merge2')
@@ -47,7 +46,7 @@ gulp.task('docs', () => {
     target: tsCompilerOptions.target,
     module: tsCompilerOptions.module,
     out: './docs',
-    includeDeclarations: true,
+    includeDeclarations: false,
     name: packageOption.name,
     version: true
   }
