@@ -127,7 +127,7 @@ export class StandardRuleVisualizer<Power>
       }
     })
   }
-  protected visualizeBoard (board: diplomacy.standardRule.Board<Power>) {
+  visualizeBoard (board: diplomacy.standardRule.Board<Power>) {
     this.clearBoard()
 
     // Visualize state
@@ -147,7 +147,7 @@ export class StandardRuleVisualizer<Power>
       this.visualizeUnit(u, status)
     })
   }
-  protected visualizeOrders (
+  visualizeOrders (
     orders: Set<diplomacy.standardRule.Order.Order<Power>>
   ) {
     this.clearOrder()
