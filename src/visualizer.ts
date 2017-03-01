@@ -50,10 +50,10 @@ export abstract class Visualizer<Power, MilitaryBranch, State, UnitStatus, Provi
     return null
   }
 
-  protected abstract visualizeBoard (
+  abstract visualizeBoard (
     board: diplomacy.board.Board<Power, MilitaryBranch, State, UnitStatus, ProvinceStatus>
   ): void
-  protected abstract visualizeOrders (
+  abstract visualizeOrders (
     orders: Set<diplomacy.rule.Order<Power, MilitaryBranch>>
   ): void
 
