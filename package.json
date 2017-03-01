@@ -2,7 +2,7 @@
   "name": "vizdip",
   "version": "0.2.1",
   "main": "target/src/vizdip.js",
-  "types": "target/intrface/vizdip.d.ts",
+  "types": "./target/interface/vizdip.d.ts",
   "scripts": {
     "prepublish": "gulp compile-src"
   },
