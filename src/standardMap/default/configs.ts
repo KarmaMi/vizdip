@@ -33,6 +33,7 @@ export class Colors {
 export const colors = new Colors()
 
 export const size = {
+  unitRadius: Math.sqrt(30*30 + 20*20) / 2,
   strokeWidth: 2,
   standoffRadius: 10,
   standoffWidth: 3,

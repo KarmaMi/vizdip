@@ -12,6 +12,7 @@ export interface Colors<Power> {
 }
 
 export interface Size {
+  unitRadius: number
   strokeWidth: number
 }
 
@@ -86,7 +87,6 @@ export abstract class UnitComponent<Power>
     }
 
     if (this.props.unit.status) {
-      const r = Math.sqrt(30*30 + 20*20) / 2
       const { x, y } = this.provincePositionOf(this.props.unit.status.attackedFrom)
 
       return <g>
@@ -98,7 +98,7 @@ export abstract class UnitComponent<Power>
         <circle
           cx={position.x}
           cy={position.y}
-          r={r}
+          r={this.size.unitRadius}
           stroke={this.colors.border}
           strokeWidth={this.size.strokeWidth}
           fill={this.colors.dislodged}
