@@ -28,12 +28,15 @@ export class Colors {
   fill: "black"
   border: "white"
   dislodged: "red"
+  margin: "white"
 }
 
 export const colors = new Colors()
 
 export const size = {
   unitRadius: Math.sqrt(30*30 + 20*20) / 2,
+  arrowHeadLength: Math.sqrt(30*30 + 20*20) / 2,
+  marginStrokeWidth: 0.5,
   strokeWidth: 2,
   standoffRadius: 10,
   standoffWidth: 3,
