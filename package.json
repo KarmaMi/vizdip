@@ -30,7 +30,7 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
-    "js-diplomacy": "0.1.4",
+    "js-diplomacy": "0.1.5",
     "react": "^15.4.2"
   }
 }
