@@ -24,18 +24,18 @@ function powers(power: Power) {
 
 export class Colors {
   power (power: Power) { return powers(power) }
-  neutralProvince: "rgb(129, 199, 132)"
-  fill: "black"
-  border: "white"
-  dislodged: "red"
-  margin: "white"
+  neutralProvince = "rgb(129, 199, 132)"
+  fill = "black"
+  border = "white"
+  dislodged = "red"
+  margin = "white"
 }
 
 export const colors = new Colors()
 
 export const size = {
   unitRadius: Math.sqrt(30*30 + 20*20) / 2,
-  arrowHeadLength: Math.sqrt(30*30 + 20*20) / 2,
+  arrowHeadLength: Math.sqrt(30*30 + 20*20) / 4,
   marginStrokeWidth: 0.5,
   strokeWidth: 2,
   standoffRadius: 10,
