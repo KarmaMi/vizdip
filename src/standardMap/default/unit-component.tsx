@@ -3,6 +3,7 @@ import * as diplomacy from "js-diplomacy"
 
 import { EventTarget } from "../../event-target"
 import { UnitProps } from "../../standardRule/units-component"
+import * as Svg from "../../util"
 
 export interface Colors<Power> {
   power (power: Power): string
@@ -87,17 +88,16 @@ export abstract class UnitComponent<Power>
     }
 
     if (this.props.unit.status) {
-      const { x, y } = this.provincePositionOf(this.props.unit.status.attackedFrom)
+      const dest = this.provincePositionOf(this.props.unit.status.attackedFrom)
 
       return <g>
-        <path
-          d={`M ${position.x}, ${position.y} ${x}, ${y}`}
+        <Svg.Line
+          from={position}
+          dest={dest}
           stroke={this.colors.fill}
-          strokeWidth={this.size.strokeWidth}
-          fill={"none"}/>
-        <circle
-          cx={position.x}
-          cy={position.y}
+          strokeWidth={this.size.strokeWidth}/>
+        <Svg.Circle
+          center={position}
           r={this.size.unitRadius}
           stroke={this.colors.border}
           strokeWidth={this.size.strokeWidth}
@@ -111,10 +111,10 @@ export abstract class UnitComponent<Power>
   }
   protected abstract locationPositionOf (
     location: diplomacy.standardRule.Location<Power>, isDislodged: boolean
-  ): { x: number, y: number }
+  ): Svg.Point
   protected abstract provincePositionOf (
     province: diplomacy.board.Province<Power>
-  ): { x: number, y: number }
+  ): Svg.Point
   protected abstract colors: Colors<Power>
   protected abstract size: Size
 }

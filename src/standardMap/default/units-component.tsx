@@ -3,6 +3,7 @@ import * as diplomacy from "js-diplomacy"
 
 import { Colors, UnitComponent as BaseUnitComponent } from "./unit-component"
 import { UnitsComponent as BaseUnitsComponent } from "./../../standardRule/units-component"
+import { Point } from "../../util"
 
 import { provincePositionOf, locationPositionOf } from "./position"
 import { size, colors } from "./configs"
@@ -10,12 +11,12 @@ import { size, colors } from "./configs"
 export class UnitComponent extends BaseUnitComponent<diplomacy.standardMap.Power> {
   protected locationPositionOf (
     location: diplomacy.standardRule.Location<diplomacy.standardMap.Power>, isDislodged: boolean
-  ): { x: number, y: number } {
+  ): Point {
     return locationPositionOf(location, isDislodged)
   }
   protected provincePositionOf (
     province: diplomacy.board.Province<diplomacy.standardMap.Power>
-  ): { x: number, y: number } {
+  ): Point {
     return provincePositionOf(province)
   }
   protected colors: Colors<diplomacy.standardMap.Power> = colors

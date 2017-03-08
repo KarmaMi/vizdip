@@ -3,6 +3,7 @@ import * as ReactDOM from "react-dom"
 import * as diplomacy from "js-diplomacy"
 
 import { EventTarget } from "../../event-target"
+import { Point } from "../../util"
 import { MapImage } from "./map-image"
 import { provincePositionOf } from "./position"
 import { size, colors } from "./configs"
@@ -146,7 +147,7 @@ export abstract class MapComponent extends React.Component<Props, {}> {
   protected size: Size = size
   protected positionOf (
     province: diplomacy.board.Province<diplomacy.standardMap.Power>
-  ): { x: number, y: number } {
+  ): Point {
     return provincePositionOf(province)
   }
   protected provinceNameOf (
