@@ -3,6 +3,7 @@ import * as ReactDOM from "react-dom"
 import * as diplomacy from "js-diplomacy"
 
 import { EventTarget } from "../../event-target"
+import { standardRule } from "../../standardRule"
 import { Point } from "../../util"
 import { MapImage } from "./map-image"
 import { provincePositionOf } from "./position"
@@ -21,18 +22,8 @@ export interface Size {
   standoffMarginWidth: number
 }
 
-export interface ProvinceWithStatus {
-  province: diplomacy.board.Province<diplomacy.standardMap.Power>
-  status: diplomacy.standardRule.ProvinceStatus<diplomacy.standardMap.Power> | null
-}
-
-export interface Props {
-  map: diplomacy.standardRule.DiplomacyMap<diplomacy.standardMap.Power>
-  provinces: Set<ProvinceWithStatus>
-  on?: (event: EventTarget, province: diplomacy.board.Province<diplomacy.standardMap.Power>) => void
-}
-
-export abstract class MapComponent extends React.Component<Props, {}> {
+export class MapComponent
+  extends React.Component<standardRule.MapComponentProps<diplomacy.standardMap.Power>, {}> {
   render () {
     // Render standoff markers
     const standoffs = Array.from(this.props.provinces).map(elem => {
@@ -143,7 +134,7 @@ export abstract class MapComponent extends React.Component<Props, {}> {
     })
   }
 
-  protected abstract colors: Colors<diplomacy.standardMap.Power> = colors
+  protected colors: Colors<diplomacy.standardMap.Power> = colors
   protected size: Size = size
   protected positionOf (
     province: diplomacy.board.Province<diplomacy.standardMap.Power>

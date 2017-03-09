@@ -10,11 +10,7 @@ import { size, colors } from "./configs"
 const Season = diplomacy.standardBoard.Season
 const Phase = diplomacy.standardRule.Phase
 
-export interface StateProps {
-  state: diplomacy.standardRule.State
-}
-
-export class StateComponent extends React.Component<StateProps, {}> {
+export class StateComponent extends React.Component<{ state: diplomacy.standardRule.State }, {}> {
   render () {
     return <g>
       <rect x="1" y="1" height="30" width="250" fill="white" stroke="black" strokeWidth="1" />
