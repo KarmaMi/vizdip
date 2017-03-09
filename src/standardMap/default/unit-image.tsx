@@ -2,7 +2,7 @@ import * as React from "react"
 import * as diplomacy from "js-diplomacy"
 
 import { EventTarget } from "../../event-target"
-import { UnitProps } from "../../standardRule/units-component"
+import { standardRule } from "../../standardRule"
 import * as Svg from "../../util"
 
 export interface Colors<Power> {
@@ -18,7 +18,7 @@ export interface Size {
 }
 
 export abstract class UnitImage<Power>
-  extends React.Component<UnitProps<Power>, {}> {
+  extends React.Component<standardRule.UnitProps<Power>, {}> {
   render () {
     const position = this.locationPositionOf(this.props.unit.unit.location, this.props.unit.status != null)
     const color = this.colors.power(this.props.unit.unit.power)

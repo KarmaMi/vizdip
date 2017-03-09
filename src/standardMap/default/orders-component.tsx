@@ -2,13 +2,13 @@ import * as React from "react"
 import * as diplomacy from "js-diplomacy"
 
 import { UnitComponent } from "./units-component"
-import { OrdersIconColors, OrdersComponent as BaseOrdersComponent } from "./../../standardRule/orders-component"
+import { standardRule } from "./../../standardRule"
 import { Point } from "../../util"
 
 import { provincePositionOf, locationPositionOf } from "./position"
 import { size, colors } from "./configs"
 
-export class OrdersComponent extends BaseOrdersComponent<diplomacy.standardMap.Power> {
+export class OrdersComponent extends standardRule.OrdersComponent<diplomacy.standardMap.Power> {
   protected locationPositionOf (
     location: diplomacy.standardRule.Location<diplomacy.standardMap.Power>, isDislodged: boolean
   ): Point {
@@ -19,7 +19,7 @@ export class OrdersComponent extends BaseOrdersComponent<diplomacy.standardMap.P
   ): Point {
     return provincePositionOf(province)
   }
-  protected colors: OrdersIconColors = colors
+  protected colors: standardRule.OrdersIconColors = colors
   protected size = size
   protected Unit = UnitComponent
 }
