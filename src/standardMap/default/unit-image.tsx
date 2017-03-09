@@ -17,7 +17,7 @@ export interface Size {
   strokeWidth: number
 }
 
-export abstract class UnitComponent<Power>
+export abstract class UnitImage<Power>
   extends React.Component<UnitProps<Power>, {}> {
   render () {
     const position = this.locationPositionOf(this.props.unit.unit.location, this.props.unit.status != null)
