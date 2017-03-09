@@ -2,7 +2,7 @@ import * as React from "react"
 import * as ReactDom from "react-dom"
 import * as diplomacy from "js-diplomacy"
 
-import { BoardComponent } from "../../src/standardMap/default/board-component"
+import { standardMap } from "../../src/vizdip"
 
 type Board = diplomacy.standardRule.Board<diplomacy.standardMap.Power>
 type Order = diplomacy.standardRule.Order.Order<diplomacy.standardMap.Power>
@@ -643,7 +643,7 @@ class Game extends React.Component<{}, { board: Board, orders: Set<Order> }> {
             <h3>Map</h3>
           </div>
           <div>
-            <BoardComponent
+            <standardMap.BoardComponent
               board={this.state.board}
               orders={this.state.orders}
               />
