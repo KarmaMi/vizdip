@@ -2,7 +2,7 @@ import * as React from "react"
 import * as diplomacy from "js-diplomacy"
 
 import { UnitComponent } from "./units-component"
-import { Colors, OrdersComponent as BaseOrdersComponent } from "./../../standardRule/orders-component"
+import { OrdersComponent as BaseOrdersComponent } from "./../../standardRule/orders-component"
 
 import { provincePositionOf, locationPositionOf } from "./position"
 import { size, colors } from "./configs"

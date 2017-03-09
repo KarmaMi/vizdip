@@ -12,12 +12,12 @@ export interface UnitProps<Power> {
   on?: (event: EventTarget) => void
 }
 
-export interface Props<Power> {
+export interface UnitsComponentProps<Power> {
   units: Set<UnitWithStatus<Power>>
   on?: (event: EventTarget, unit: diplomacy.standardRule.Unit<Power>) => void
 }
 
-export abstract class UnitsComponent<Power> extends React.Component<Props<Power>, {}> {
+export abstract class UnitsComponent<Power> extends React.Component<UnitsComponentProps<Power>, {}> {
   render () {
     const units = Array.from(this.props.units)
       .filter(unit => unit.status === null)

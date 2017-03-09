@@ -4,25 +4,25 @@ import { EventTarget } from "../event-target"
 import { UnitProps } from "./units-component"
 import * as Svg from "../util"
 
-export interface Colors {
+export interface OrdersIconColors {
   fill: string
   margin: string
   border: string
   dislodged: string
 }
 
-export interface Size {
+export interface OrdersIconSize {
   unitRadius: number
   strokeWidth: number
   marginStrokeWidth: number
   arrowHeadLength: number
 }
 
-export interface Props<Power> {
+export interface OrdersComponentProps<Power> {
   orders: Set<diplomacy.standardRule.Order.Order<Power>>
 }
 
-export abstract class OrdersComponent<Power> extends React.Component<Props<Power>, {}> {
+export abstract class OrdersComponent<Power> extends React.Component<OrdersComponentProps<Power>, {}> {
   render() {
     const destPosition =
       (pos: Svg.Point, theta: number, l: number) => {
@@ -173,8 +173,8 @@ export abstract class OrdersComponent<Power> extends React.Component<Props<Power
   }
 
   protected abstract Unit: new (props: UnitProps<Power>) => React.Component<UnitProps<Power>, {}>
-  protected abstract colors: Colors
-  protected abstract size: Size
+  protected abstract colors: OrdersIconColors
+  protected abstract size: OrdersIconSize
   protected abstract provincePositionOf (
     province: diplomacy.board.Province<Power>
   ): Svg.Point
