@@ -15,61 +15,6 @@
     <script src="./example.js"></script>
   </head>
   <body onload="javascript:initialize();">
-    <div class="container">
-      <div class="page-header">
-        <h1>Vizdip Example</h1>
-      </div>
-      <div class="row">
-        <div class="col-md-8" id="map-col">
-          <div class="page-header">
-            <h3>Map</h3>
-          </div>
-          <object id="map" data="../images/standard-map.svg" type="image/svg+xml"></object>
-        </div>
-        <div class="col-md-4">
-          <div class="page-header">
-            <h3>Orders</h3>
-          </div>
-          <div id="orders"></div>
-          <div class="page-footer">
-            <button type="button" id="resolve" class="btn btn-default" aria-label="Left Align">
-              Resolve
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="page-header">
-            <h3>Results</h3>
-          </div>
-          <table class="table table-striped" id="result">
-            <thead>
-              <tr><th>Order</th><th>Result</th>
-            </thead>
-            <tbody id="result-body"></tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="modal fade" id="error-dialog">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-body">
-              <span class="label label-danger">Error</span><span id="result-error"></p>
-            </div>
-            <div class="modal-footer">
-              <p class="text-center">
-                <a class="btn btn-default" data-dismiss="modal" href="#">Close</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="unit-images">
-      <object id="army" data="../images/army.svg" type="image/svg+xml"></object>
-      <object id="fleet" data="../images/fleet.svg" type="image/svg+xml"></object>
-    </div>
+    <div id="example"></div>
   </body>
 </html>

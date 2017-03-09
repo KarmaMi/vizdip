@@ -13,7 +13,6 @@ gulp docs &&
 ## Compile example
 gulp compile-sample &&
 ## Add files to gh-pages
-cp images ./public -r &&
 cp example/index.html ./public/example -r &&
 cp example/example.js ./public/example -r &&
 cp example/example.js.map ./public/example -r &&

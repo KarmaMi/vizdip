@@ -15,7 +15,7 @@ const tsCompilerOptions = require('./src/tsconfig.json').compilerOptions
 
 // compile source files
 gulp.task('compile-src', () => {
-  const tsResult = gulp.src(['./src/**/*.ts'])
+  const tsResult = gulp.src(['./src/**/*.ts', './src/**/*.tsx'])
     .pipe(sourcemaps.init())
     .pipe(tsSourceProject(ts.reporter.defaultReporter()))
 
@@ -28,7 +28,7 @@ gulp.task('compile-src', () => {
 })
 
 gulp.task('compile-sample', () => {
-  browserify({entries: ['example/src/example.js']})
+  browserify({entries: ['example/src/example.tsx']})
   .plugin(tsify, tsCompilerOptions)
   .bundle()
   .pipe(source('example.js'))
@@ -37,7 +37,7 @@ gulp.task('compile-sample', () => {
   .pipe(sourcemaps.write('./'))
   .pipe(gulp.dest('example/'))
 })
-gulp.task('watch-sample', () => gulp.watch(['src/**/*.ts', 'example/**/*.js'], ['compile-sample']))
+gulp.task('watch-sample', () => gulp.watch(['src/**/*.ts', 'src/**/*.tsx', 'example/**/*.jsx'], ['compile-sample']))
 
 // Create a documentation
 gulp.task('docs', () => {
@@ -45,12 +45,13 @@ gulp.task('docs', () => {
   const configs = {
     target: tsCompilerOptions.target,
     module: tsCompilerOptions.module,
+    jsx: tsCompilerOptions.jsx,
     out: './docs',
     includeDeclarations: false,
     name: packageOption.name,
     version: true
   }
-  gulp.src(['./src/**/*.ts'], { read: false })
+  gulp.src(['./src/**/*.ts', './src/**/*.tsx'], { read: false })
     .pipe(typedoc(configs))
 })
 
