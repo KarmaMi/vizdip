@@ -240,8 +240,13 @@ export namespace standardRule {
           }) as Array<diplomacy.standardRule.Order.Order<Power>>
       )
       return <svg width={`${this.width}px`} height={`${this.height}px`}>
-        <this.MapComponent map={this.props.board.map} provinces={provinces}/>
-        <this.UnitsComponent units={units}/>
+        <this.MapComponent
+          on={this.props.onProvince}
+          map={this.props.board.map}
+          provinces={provinces}/>
+        <this.UnitsComponent
+          on={this.props.onUnit}
+          units={units}/>
         <this.OrdersComponent orders={orders}/>
         <this.StateComponent state={this.props.board.state} />
       </svg>
