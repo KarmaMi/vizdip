@@ -2,7 +2,7 @@ import * as React from "react"
 import * as diplomacy from "js-diplomacy"
 
 import { standardRule } from "../../standardRule"
-import { Colors, UnitImage } from "./unit-image"
+import { UnitImageColors, UnitImage } from "./unit-image"
 import { Point } from "../../util"
 
 import { provincePositionOf, locationPositionOf } from "./position"
@@ -19,7 +19,7 @@ export class UnitComponent extends UnitImage<diplomacy.standardMap.Power> {
   ): Point {
     return provincePositionOf(province)
   }
-  protected colors: Colors<diplomacy.standardMap.Power> = colors
+  protected colors: UnitImageColors<diplomacy.standardMap.Power> = colors
   protected size = size
 }
 

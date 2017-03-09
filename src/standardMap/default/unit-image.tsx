@@ -5,14 +5,14 @@ import { EventTarget } from "../../event-target"
 import { standardRule } from "../../standardRule"
 import * as Svg from "../../util"
 
-export interface Colors<Power> {
+export interface UnitImageColors<Power> {
   power (power: Power): string
   fill: string
   border: string
   dislodged: string
 }
 
-export interface Size {
+export interface UnitImageSize {
   unitRadius: number
   strokeWidth: number
 }
@@ -115,6 +115,6 @@ export abstract class UnitImage<Power>
   protected abstract provincePositionOf (
     province: diplomacy.board.Province<Power>
   ): Svg.Point
-  protected abstract colors: Colors<Power>
-  protected abstract size: Size
+  protected abstract colors: UnitImageColors<Power>
+  protected abstract size: UnitImageSize
 }
